@@ -1,7 +1,6 @@
 import json
 import streamlit as st
 import requests
-from requests.adapters import HTTPAdapter
 
 
 def run():
