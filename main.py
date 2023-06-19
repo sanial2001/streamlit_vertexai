@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 
 
+
 def run():
     option = st.selectbox(
         'Select the type of generative AI?',
