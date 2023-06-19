@@ -17,7 +17,7 @@ def run():
             "input_type": option
         }
         if st.button("output"):
-            resp = requests.post("http://172.16.200.30:10179/vertex", json=data)
+            resp = requests.post("http://172.16.200.30:10179/vertex", json=data, verify=False)
             print(resp.text)
             json_data = json.loads(resp.text)
             st.json(json_data)
