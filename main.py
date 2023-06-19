@@ -17,10 +17,6 @@ def run():
             "input_type": option
         }
         if st.button("output"):
-            session = requests.Session()
-            retry = HTTPAdapter(max_retries=5)
-            session.mount("http://", retry)
-            session.mount("https://", retry)
             resp = requests.post("http://172.16.200.30:10179/vertex", json=data)
             print(resp.text)
             json_data = json.loads(resp.text)
